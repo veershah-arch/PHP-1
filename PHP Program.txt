@@ -1,0 +1,14 @@
+
+<?php  
+$load = array(10,60,50,15,20); // loads
+$output=2; // number of servers 
+foreach ($load as &$value) 
+{ 
+if($value < 50){ 
+   $output = $output/2; // load less than 50
+}else{
+   $output = 2*$output+1;  //load more than 50
+}} 
+echo (int) "$output" ; // final output rounding off
+
+?>
